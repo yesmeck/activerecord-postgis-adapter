@@ -152,7 +152,7 @@ module ActiveRecord  # :nodoc:
 
         def type_cast(value)
           return if value.nil?
-          ::RGeo::WKRep::WKBParser.new(@factory_generator, support_ewkb: true).parse(value) rescue nil
+          ::RGeo::WKRep::WKTParser.new(@factory_generator, support_ewkb: true).parse(value) rescue nil
         end
 
       end
